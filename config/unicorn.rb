@@ -1,5 +1,11 @@
-# http://michaelvanrooijen.com/articles/2011/06/01-more-concurrency-on-a-single-heroku-dyno-with-the-new-celadon-cedar-stack/
+working_directory "/home/deploy/apps/errbox/current"
+pid "/home/deploy/apps/errbox/shared/pids/unicorn.pid"
+stderr_path "/home/deploy/apps/errbox/shared/log/unicorn.log"
+stdout_path "/home/deploy/apps/errbox/shared/log/unicirn.log"
 
-worker_processes 3 # amount of unicorn workers to spin up
-timeout 30         # restarts workers that hang for 30 seconds
+listen "/tmp/unicorn.errbox.sock"
+
+worker_processes 3
+timeout 30
+
 preload_app true
